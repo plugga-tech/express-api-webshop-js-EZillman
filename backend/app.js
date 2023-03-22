@@ -28,7 +28,7 @@ require('dotenv').config();
 
 async function init() {
     try {
-        const options = { useNewUrlParser: true, useUnifiedTopology: true }
+        const options = { dbName: `evelina_zillman`, useNewUrlParser: true, useUnifiedTopology: true }
         await mongoose.connect(process.env.DATABASE_URL, options)
         console.log('Connected to cloud database');
     } catch (error) {
