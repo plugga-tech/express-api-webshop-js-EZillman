@@ -9,7 +9,6 @@ router.get('/', async (req, res) => {
   try {
     const users = await userModel.find({}, 'name email id');
 
-
     res.status(200).json(users);
 
   } catch (err) {
@@ -26,11 +25,12 @@ router.post('/', async (req, res) => {
     const user = await userModel.findById(userId);
 
 
-    if (!user) {
+    if (user) {
+      res.json(user);
+
+    } else {
       return res.status(404).send('No user found');
     }
-
-    res.json(user);
 
   } catch (err) {
     console.log(err);
@@ -58,12 +58,10 @@ router.post('/login', async (req, res) => {
       return res.status(401).send('Invalid email or password');
     }
 
-
   } catch (err) {
     console.log(err);
     res.status(500).send('Server error');
   }
-
 
 });
 
