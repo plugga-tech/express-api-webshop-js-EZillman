@@ -45,4 +45,26 @@ router.post('/add', async (req, res) => {
   res.status(201).json(user);
 });
 
+
+router.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const user = await userModel.findOne({ email, password });
+
+    if (user) {
+      res.json(user);
+    } else {
+      return res.status(401).send('Invalid email or password');
+    }
+
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).send('Server error');
+  }
+
+
+});
+
 module.exports = router;
