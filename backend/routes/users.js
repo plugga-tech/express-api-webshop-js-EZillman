@@ -3,8 +3,9 @@ var router = express.Router();
 const userModel = require('../models/user-model');
 
 /* GET users listing. */
-router.get('/', function (req, res, next) {
-  res.send('Users');
+router.get('/', async (req, res) => {
+  const users = await userModel.find({}, 'name email id')
+  res.status(200).json(users)
 });
 
 router.post('/add', async (req, res) => {
