@@ -13,7 +13,7 @@ POST http://localhost:3000/api/users/
 Content-Type: application/json
 
 {
-  "id": "641dd2a0ed38cc40fd957c98"
+  "id": "641f87fdbd5d11898d1f0470"
 }
 
 ###
@@ -23,9 +23,9 @@ POST http://localhost:3000/api/users/add
 Content-Type: application/json
 
 {
-  "name": "Best Bestsson",
-  "email": "best@mail.com",
-  "password": "best"
+  "name": "Fest Festsson",
+  "email": "fest@mail.com",
+  "password": "fest"
 }
 
 ###
@@ -35,8 +35,8 @@ POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-  "email": "best@mail.com",
-  "password": "best"
+  "email": "fest@mail.com",
+  "password": "fest"
 }
 
 ###
@@ -53,7 +53,8 @@ GET http://localhost:3000/api/products
 ###
 
 // HÄMTA SPECIFIK PRODUKT
-GET http://localhost:3000/api/products/ // ID PÅ PRODUKT
+GET http://localhost:3000/api/products/641f8bf156785aeea22a4492 
+// ID PÅ PRODUKT
 
 ###
 
@@ -62,10 +63,10 @@ POST http://localhost:3000/api/products/add
 Content-Type: application/json
 
 {
-  "name": "Produkt 1",
-  "description": "Beskrivning av produkt 1",
-  "price": 100, 
-  "lager": 10
+  "name": "Produkt 5",
+  "description": "Beskrivning av produkt 5",
+  "price": 500, 
+  "lager": 5
 }
 
 ###
