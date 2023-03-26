@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
-const productModel = require('../models/product-model');
+const ProductModel = require('../models/product-model');
 
 /* GET users listing. */
 router.get('/', async (req, res) => {
     try {
-        const products = await productModel.find();
+        const products = await ProductModel.find();
 
         res.status(200).json(products);
 
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res) => {
     const productId = req.params.id;
 
     try {
-        const product = await productModel.findById(productId);
+        const product = await ProductModel.findById(productId);
 
         if (product) {
             res.json(product);
@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/add', async (req, res) => {
-    const product = await productModel.create(req.body);
+    const product = await ProductModel.create(req.body);
     res.status(201).json(product);
 });
 

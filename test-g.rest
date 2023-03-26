@@ -23,9 +23,9 @@ POST http://localhost:3000/api/users/add
 Content-Type: application/json
 
 {
-  "name": "Fest Festsson",
-  "email": "fest@mail.com",
-  "password": "fest"
+  "name": "Mest Mestsson",
+  "email": "mest@mail.com",
+  "password": "mest"
 }
 
 ###
@@ -35,8 +35,8 @@ POST http://localhost:3000/api/users/login
 Content-Type: application/json
 
 {
-  "email": "fest@mail.com",
-  "password": "fest"
+  "email": "mest@mail.com",
+  "password": "mest"
 }
 
 ###
@@ -53,7 +53,7 @@ GET http://localhost:3000/api/products
 ###
 
 // HÄMTA SPECIFIK PRODUKT
-GET http://localhost:3000/api/products/641f8bf156785aeea22a4492 
+GET http://localhost:3000/api/products/64207d36b2d8acfa3b9f02a7 
 // ID PÅ PRODUKT
 
 ###
@@ -63,10 +63,10 @@ POST http://localhost:3000/api/products/add
 Content-Type: application/json
 
 {
-  "name": "Produkt hej",
-  "description": "Beskrivning av produkt hej",
-  "price": 300, 
-  "lager": 4
+  "name": "Produkt glass",
+  "description": "Beskrivning av produkt glass",
+  "price": 150, 
+  "lager": 30
 }
 
 ###
@@ -84,11 +84,11 @@ Content-Type: application/json
       "products": [
     {
       "productId": "642064e1fe7d82d6d125249a",
-      "quantity": 1
+      "quantity": 2
     },
     {
       "productId": "641f987cd9905449c2d6501d",
-      "quantity": 1
+      "quantity": 2
     }
   ]
 }
