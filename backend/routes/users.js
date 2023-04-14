@@ -2,7 +2,6 @@ var express = require('express');
 var router = express.Router();
 const UserModel = require('../models/user-model');
 
-/* GET users listing. */
 router.get('/', async (req, res) => {
   try {
     const users = await UserModel.find({}, 'name email id');

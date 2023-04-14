@@ -3,19 +3,6 @@ var router = express.Router();
 const OrderModel = require('../models/order-model');
 const ProductModel = require('../models/product-model');
 
-/*
-router.post('/add', async (req, res) => {
-    const { user, products } = req.body;
-    const order = new OrderModel({ user, products });
-
-    try {
-        await order.save();
-        res.status(201).json(order);
-    } catch (err) {
-        res.status(500).send('Could not create order, invalid user id or product id');
-    }
-}); */
-
 router.post('/add', async (req, res) => {
     try {
         const { user, products } = req.body;
