@@ -83,12 +83,12 @@ Content-Type: application/json
   "user": "641f87fdbd5d11898d1f0470",
       "products": [
     {
-      "productId": "642064e1fe7d82d6d125249a",
-      "quantity": 5
+      "productId": "64207dbb4e2f63951bc4bc15",
+      "quantity": 4
     },
     {
-      "productId": "641f987cd9905449c2d6501d",
-      "quantity": 5
+      "productId": "64207f962c53b43dbadf6fc9",
+      "quantity": 2
     }
   ]
 }
